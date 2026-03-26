@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:ParkingMauiApp.Models"
+             x:Class="ParkingMauiApp.Views.BookingHistoryPage"
+             Title="История">
+    <CollectionView ItemsSource="{Binding Items}" Padding="16">
+        <CollectionView.ItemTemplate>
+            <DataTemplate x:DataType="models:Booking">
+                <Frame Margin="0,0,0,10">
+                    <VerticalStackLayout>
+                        <Label Text="{Binding SpotId, StringFormat='Место: {0}'}" FontAttributes="Bold" />
+                        <Label Text="{Binding Start, StringFormat='Начало: {0:dd.MM.yyyy HH:mm}'}" />
+                        <Label Text="{Binding End, StringFormat='Конец: {0:dd.MM.yyyy HH:mm}'}" />
+                        <Label Text="{Binding Cost, StringFormat='Стоимость: {0} ₽'}" />
+                    </VerticalStackLayout>
+                </Frame>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>
