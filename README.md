@@ -1,6 +1,6 @@
-# ParkingKotlinApp (Kotlin + Jetpack Compose)
+# Parking Kotlin App (Kotlin + Jetpack Compose)
 
-Единственный проект в репозитории: Android-приложение на Kotlin.
+В репозитории оставлен только Android-проект на Kotlin.
 
 ## Что реализовано
 - Экран приветствия
@@ -12,9 +12,9 @@
 - Нижняя навигация (Bottom Navigation)
 
 ## Как запустить (самый простой способ)
-1. Скачайте папку `ParkingKotlinApp`.
+1. Скачайте репозиторий (или ZIP).
 2. Откройте Android Studio.
-3. Нажмите **Open** и выберите папку `ParkingKotlinApp`.
+3. Нажмите **Open** и выберите корневую папку проекта.
 4. Дождитесь **Gradle Sync**.
 5. Выберите эмулятор или телефон и нажмите **Run**.
 
