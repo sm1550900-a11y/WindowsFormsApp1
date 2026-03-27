@@ -1,6 +1,6 @@
 # ParkingKotlinApp (Kotlin + Jetpack Compose)
 
-Альтернативная версия приложения бронирования парковки на Kotlin для Android.
+Единственный проект в репозитории: Android-приложение на Kotlin.
 
 ## Что реализовано
 - Экран приветствия
@@ -9,12 +9,19 @@
 - История бронирования
 - Профиль
 - Настройки
-- Нижняя навигация (bottom bar)
+- Нижняя навигация (Bottom Navigation)
 
-## Как запустить
-1. Откройте папку `ParkingKotlinApp` в Android Studio.
-2. Дождитесь синхронизации Gradle.
-3. Нажмите **Run** на эмуляторе/устройстве Android.
+## Как запустить (самый простой способ)
+1. Скачайте папку `ParkingKotlinApp`.
+2. Откройте Android Studio.
+3. Нажмите **Open** и выберите папку `ParkingKotlinApp`.
+4. Дождитесь **Gradle Sync**.
+5. Выберите эмулятор или телефон и нажмите **Run**.
+
+## Требования
+- Android Studio (Hedgehog или новее)
+- Android SDK 34
+- JDK 17 (обычно уже встроен в Android Studio)
 
 ## Примечание
 Сейчас данные хранятся в памяти (`ParkingRepository`). Следующим шагом можно подключить Room или API + MySQL.
