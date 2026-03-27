@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:ParkingMauiApp.Models"
+             xmlns:conv="clr-namespace:ParkingMauiApp.Converters"
+             x:Class="ParkingMauiApp.Views.MainPage"
+             Title="Главная">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <conv:SpotStatusToColorConverter x:Key="SpotStatusToColorConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <VerticalStackLayout Padding="16" Spacing="12">
+        <Label Text="Карта парковки" FontSize="24" />
+        <CollectionView ItemsSource="{Binding Spots}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:ParkingSpot">
+                    <Grid ColumnDefinitions="*,Auto,Auto" Padding="8">
+                        <Label Text="{Binding Id}" FontAttributes="Bold" />
+                        <Label Grid.Column="1" Text="{Binding PricePerHour, StringFormat='{}{0} ₽/ч'}" />
+                        <Button Grid.Column="2" Text="Бронировать"
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.BookCommand}"
+                                CommandParameter="{Binding .}"
+                                BackgroundColor="{Binding Status, Converter={StaticResource SpotStatusToColorConverter}}" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Label Text="{Binding Result}" TextColor="Gray" />
+    </VerticalStackLayout>
+</ContentPage>

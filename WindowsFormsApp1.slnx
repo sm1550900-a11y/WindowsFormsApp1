@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="WindowsFormsApp1/WindowsFormsApp1.csproj" Id="0c9a3bf7-6e0a-476a-aa4e-4b3d7fba3edc" />
+  <Project Path="ParkingMauiApp/ParkingMauiApp.csproj" Id="f5a6a890-3cb0-4ea2-a192-2ef95a0f5f23" />
 </Solution>
